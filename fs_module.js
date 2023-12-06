@@ -64,3 +64,16 @@ let deleteFile = async () => {
 
 // calling the function deleteFile():
 // deleteFile();
+
+
+
+// to rename a file, we can apply the fs.rename() method:
+let renameFile = async () => {
+    // we will declaring the file to delete here:
+    await fs.rename(path.join(__dirname, `hello.txt`), `hello_rename.txt`, (err, data) => {
+        err ? console.log(`Something went wrong, the file does not exist:\n${err}`) : console.log(`The file has been renamed successfully`)
+    })
+}
+
+// callling the function renameFile:
+renameFile();
