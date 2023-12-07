@@ -77,3 +77,20 @@ let renameFile = async () => {
 
 // callling the function renameFile:
 // renameFile();
+
+
+
+
+// using the fs.existsSYNC() method to check if a file exists or not:
+// it can be also used to check if a directory exists or not, so we will be using the following code lines:
+const checkFile = async () => {
+    if (fs.existsSync(path.join(__dirname, `fakeFolder`))) { //add ! before fs.existSYNC() to reverse condition.
+        console.log(`the fakeDirctory exists`)
+    }
+    else {
+        console.log(`Something went wrong, the directory does not exist`)
+    }
+}
+
+//calling the function to execute:
+// checkFile();
