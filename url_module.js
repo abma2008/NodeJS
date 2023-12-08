@@ -5,7 +5,7 @@
  */
 
 // import the url module:
-const url = require(`node:url`);
+const url = require(`node:url`); // also you can write require(`url`) without specifying node: before
 
 // making a new variable url to test:
 let link = `http://localhost:8080/default.htm?year=2015&month=january`;
